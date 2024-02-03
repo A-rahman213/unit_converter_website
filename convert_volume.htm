@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Unit Converter</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+        <script src="script.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+        <meta name="viewport" content="width=device-width, inital-scale=1">
+    </head>
+    <body>
+        <div class="container text-center">
+                <div class="Speedlabel"> <!--label so user can see which box to use-->
+                    Convert Volume:
+                </div>
+                <input id="valueinput"> <span>=</span> <span class="border" id="valueoutput"></span> <!--User inputs for values-->
+                <br>
+                <select name="ConvertVolFrom" id="unitFrom"> <!--drop down of Metric Units of length-->
+                    <option value="cm3">Cubic Centimeters (CC)</option>
+                    <option value="l">Litres (l)</option>
+                    <option value="ml">Millilitres (ml)</option>
+                    <option value="fl-oz">Ounces (oz)</option>
+                    <option value="gal">Gallons (gal)</option>
+                    <option value="pnt">Pints (pts)</option>
+                </select> <span>=</span> <!--divider so converter looks clean-->
+                <select name="ConvertVolTo" id="unitTo">
+                    <option value="cm3">Cubic Centimeters (CC)</option>
+                    <option value="l">Litres (l)</option>
+                    <option value="ml">Millilitres (ml)</option>
+                    <option value="fl-oz">Ounce (oz)</option>
+                    <option value="gal">Gallons (gal)</option>
+                    <option value="pnt">Pints (pts)</option>
+                </select>
+                <br>
+                <input type="button" value="Submit" onclick="volconvert(3)"><!--button so user can submit value-->
+
+                <table class="table table-bordered">
+                  <thead>
+                    <tr>
+                      <th>Converted From</th>
+                      <th>Converted To</th>
+                      <th>Value Entered </th>
+                      <th>Value Calculated</th>
+                    </tr>
+                  </thead>
+                  <tbody id="unitRow">
+                  </tbody>
+        </div>
+
+    </body>
+</html>
